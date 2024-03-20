@@ -4,7 +4,7 @@
 
 local header = {}
 
-local cwd = "/.gifs/"
+local dir = ".config/nvim/.gifs/"
 
 local colors = {
     "none" , "2"   , "8"   , "16/8" , --4
@@ -40,7 +40,7 @@ header.animated_rainbow_circle = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "rainbow_circle.gif",
+        vim.fn.expand("~/")   .. dir                              .. "rainbow_circle.gif",
     width = 70,
     height = 30,
     opts = {
@@ -61,7 +61,7 @@ header.animated_geometry = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "geometry.gif",
+        vim.fn.expand("~/")   .. dir                              .. "geometry.gif",
     width = 70,
     height = 30,
     opts = {
@@ -81,7 +81,7 @@ header.animated_sphere_2 = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "sphere_2.gif",
+        vim.fn.expand("~/")   .. dir                              .. "sphere_2.gif",
     width = 70,
     height = 30,
     opts = {
@@ -101,7 +101,7 @@ header.animated_sphere_1 = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "sphere_1.gif",
+        vim.fn.expand("~/")   .. dir                              .. "sphere_1.gif",
     width = 60,
     height = 30,
     opts = {
@@ -121,7 +121,7 @@ header.animated_nyan = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "nyan.gif",
+        vim.fn.expand("~/")   .. dir                              .. "nyan.gif",
     width = 80,
     height = 30,
     opts = {
@@ -142,7 +142,7 @@ header.animated_plane_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "plane.gif",
+        vim.fn.expand("~/")   .. dir                              .. "plane.gif",
     width = 80,
     height = 30,
     opts = {
@@ -162,7 +162,7 @@ header.animated_predator_fish = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "predator_fish.gif",
+        vim.fn.expand("~/")   .. dir                              .. "predator_fish.gif",
     width = 80,
     height = 30,
     opts = {
@@ -182,7 +182,7 @@ header.animated_string = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[15]                      .. " "              ..
-        "%:p:h"               .. cwd                              .. "string.gif",
+        vim.fn.expand("~/")   .. dir                              .. "string.gif",
     width = 80,
     height = 30,
     opts = {
@@ -203,7 +203,7 @@ header.animated_pepe = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "pepe.gif",
+        vim.fn.expand("~/")   .. dir                              .. "pepe.gif",
     width = 90,
     height = 30,
     opts = {
@@ -224,7 +224,7 @@ header.animated_rain_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "rain.gif",
+        vim.fn.expand("~/")   .. dir                              .. "rain.gif",
     width = 90,
     height = 30,
     opts = {
@@ -243,7 +243,7 @@ header.animated_bat_dark = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "bat.gif",
+        vim.fn.expand("~/")   .. dir                              .. "bat.gif",
     width = 70,
     height = 30,
     opts = {
@@ -264,7 +264,7 @@ header.animated_bat_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "bat.gif",
+        vim.fn.expand("~/")   .. dir                              .. "bat.gif",
     width = 70,
     height = 30,
     opts = {
@@ -285,7 +285,7 @@ header.animated_ufo_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "ufo.gif",
+        vim.fn.expand("~/")   .. dir                              .. "ufo.gif",
     width = 70,
     height = 30,
     opts = {
@@ -305,7 +305,7 @@ header.animated_fish_dark = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[21]                      .. " "              ..
-        "%:p:h"               .. cwd                              .. "fish.gif",
+        vim.fn.expand("~/")   .. dir                              .. "fish.gif",
     width = 80,
     height = 30,
     opts = {
@@ -326,7 +326,7 @@ header.animated_fish_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[21]                      .. " "              ..
-        "%:p:h"               .. cwd                              .. "fish.gif",
+        vim.fn.expand("~/")   .. dir                              .. "fish.gif",
     width = 80,
     height = 30,
     opts = {
@@ -346,7 +346,7 @@ header.animated_eyes_dark = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "eyes.gif",
+        vim.fn.expand("~/")   .. dir                              .. "eyes.gif",
     width = 80,
     height = 30,
     opts = {
@@ -367,7 +367,7 @@ header.animated_eyes_light = {
         "--dither "           .. dither[1]                        .. " "              ..
         "--dither-intensity " .. "1.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "eyes.gif",
+        vim.fn.expand("~/")   .. dir                              .. "eyes.gif",
     width = 80,
     height = 30,
     opts = {
@@ -388,7 +388,7 @@ header.animated_pikachu = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "pikachu.gif",
+        vim.fn.expand("~/")   .. dir                              .. "pikachu.gif",
     width = 80,
     height = 30,
     opts = {
@@ -409,7 +409,7 @@ header.animated_slinky = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        " %:p:h"              .. cwd                              .. "slinky.gif",
+        " %:p:h"              .. dir                              .. "slinky.gif",
     width = 60,
     height = 30,
     opts = {
@@ -428,7 +428,7 @@ header.animated_cat = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "cat.gif",
+        vim.fn.expand("~/")   .. dir                              .. "cat.gif",
     width = 60,
     height = 30,
     opts = {
@@ -448,7 +448,7 @@ header.animated_prism = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[15]                      .. " "              ..
-        "%:p:h"               .. cwd                              .. "prism.gif",
+        vim.fn.expand("~/")   .. dir                              .. "prism.gif",
     width = 60,
     height = 30,
     opts = {
@@ -468,7 +468,7 @@ header.animated_duck_dark = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "duck.gif",
+        vim.fn.expand("~/")   .. dir                              .. "duck.gif",
     width = 60,
     height = 30,
     opts = {
@@ -489,7 +489,7 @@ header.animated_duck_light = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "duck.gif",
+        vim.fn.expand("~/")   .. dir                              .. "duck.gif",
     width = 60,
     height = 30,
     opts = {
@@ -509,7 +509,7 @@ header.animated_planet = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "planet.gif",
+        vim.fn.expand("~/")   .. dir                              .. "planet.gif",
     width = 70,
     height = 30,
     opts = {
@@ -529,7 +529,7 @@ header.animated_spaceship = {
         "--dither "           .. dither[3]                        .. " "              ..
         "--dither-intensity " .. "2.0"                            .. " "              ..
         "--symbols "          .. symbols[1]                       .. " "              ..
-        "%:p:h"               .. cwd                              .. "spaceship.gif",
+        vim.fn.expand("~/")   .. dir                              .. "spaceship.gif",
     width = 70,
     height = 30,
     opts = {
@@ -540,6 +540,7 @@ header.animated_spaceship = {
 }
 
 return header
+
 
 
 
