@@ -8,8 +8,13 @@ require 'nvim-treesitter.configs'.setup {
     },
     --other treesitter settings
 
-
-
 }
+
+
+
+
+
+
+
 
 

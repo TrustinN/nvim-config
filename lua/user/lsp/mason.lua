@@ -21,6 +21,7 @@ require("lspconfig").julials.setup{
     julia_env_path = "%:p:h/.julia/environments/nvim-lspconfig"
 }
 require("lspconfig").tsserver.setup{}
+require("lspconfig").clangd.setup{}
 
 
 
