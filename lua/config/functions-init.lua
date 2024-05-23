@@ -2,6 +2,17 @@
 --Functions
 ---------------------------------------------------------------------------
 
+-- Returns a table containing all items in t1 followed by items in t2
+--@param t1 table
+--@param t2 table
+--@return t1
+function table.combine(t1, t2)
+    for i=1,#t2 do
+        t1[#t1+1] = t2[i]
+    end
+    return t1
+end
+
 function table.contains(table, element)
     for _, value in pairs(table) do
         if value == element then
