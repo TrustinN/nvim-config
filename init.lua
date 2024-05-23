@@ -2,8 +2,8 @@
 --Leader Map
 ---------------------------------------------------------------------------
 
-require "config.functions-init"
-require "config.plugin-setup"
+require "config.functions"
+require "config.options"
 require "user.reload"
 
 vim.g.mapleader = ' '
