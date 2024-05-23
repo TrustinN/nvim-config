@@ -41,8 +41,8 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
     group = Python,
     pattern = {"*.py"},
     callback = function()
-        vim.cmd("luafile ~/.config/nvim/lua/plugins/hydra/dap.lua")
-        vim.cmd("luafile ~/.config/nvim/lua/plugins/hydra/jupyter.lua")
+        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap.lua")
+        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/jupyter.lua")
     end
 })
 
