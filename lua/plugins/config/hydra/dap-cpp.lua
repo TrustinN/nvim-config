@@ -40,8 +40,8 @@ Hydra({
     heads = {
         { "0",
             function()
-                local currFile = vim.fn.expand("%:p"):match("^.+/(.+)%.")
-                if currFile == "CMakeLists" then
+                local currFile = vim.fn.expand("%:p"):match("^.+/(.+)")
+                if currFile == "CMakeLists.txt" then
                     os.execute("mkdir -p build && cd build && cmake .. && cmake --build .")
                 else
                     vim.notify("Error: Must be in CMakeLists.txt to build")
