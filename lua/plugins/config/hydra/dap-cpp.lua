@@ -10,18 +10,22 @@ local hint = [[
            █        █        
           █ █      █ █       
          █   ██████   █      
-                             
+
+_0_ - Build                  
 _1_ - DEBUG                  
+
 _2_ - Breakpoint             
 _3_ - Conditional Breakpoint 
+
 _4_ - Step over              
-_5_ - Step into   
-_6_ - Test method 
-_7_ - Terminate
+_5_ - Step into              
+
+_6_ - Test method            
+_7_ - Terminate              
 ]]
 
 Hydra({
-    name = "Jupyter",
+    name = "DAP",
     hint = hint,
     config = {
        color = 'pink',
@@ -34,8 +38,19 @@ Hydra({
     mode = 'n',
     body = '<leader>d',
     heads = {
-        { "1", cmd "lua require'dap'.continue()", { nowait = true }},
-        { "2", cmd "lua require'dap'.toggle_breakpoint()" },
+        { "0",
+            function()
+                local currFile = vim.fn.expand("%:p"):match("^.+/(.+)%.")
+                if currFile == "CMakeLists" then
+                    os.execute("mkdir -p build && cd build && cmake .. && cmake --build .")
+                else
+                    vim.notify("Error: Must be in CMakeLists.txt to build")
+                end
+            end,
+            { nowait = true }
+        },
+        { "1", cmd "lua require('dap').continue()", { nowait = true }},
+        { "2", cmd "lua require('dap').toggle_breakpoint()" },
         { "3",
             function()
                 vim.ui.input({"Condition: "}, function(input)
@@ -44,10 +59,10 @@ Hydra({
                     end)
             end
         },
-        { "4", cmd "lua require'dap'.step_over()" },
-        { "5", cmd "lua require'dap'.step_into()" },
-        { "6", cmd "lua require('dap-python').test_method()" },
-        { "7", cmd "lua require'dap'.terminate()"},
+        { "4", cmd "lua require('dap').step_over()" },
+        { "5", cmd "lua require('dap').step_into()" },
+        { "6", cmd "lua require('dap').test_method()" },
+        { "7", cmd "lua require('dap').terminate()"},
         { "<ESC>", nil, { exit = true }},
     },
 })

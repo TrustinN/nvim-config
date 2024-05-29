@@ -33,9 +33,18 @@ return {
         config = function()
             require("project_nvim").setup({
                 detection_methods = { "lsp", "pattern" },
-                patterns = {"*.py", "*.html", "*.jsx", ".m"},
+                patterns = {
+                    "*.py",
+                    "*.cpp",
+                    "*.txt",
+                    "*.html",
+                    "*.jsx",
+                    "*.m"
+                },
             })
         end
     },
 }
+
+
 

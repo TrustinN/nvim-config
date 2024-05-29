@@ -1,9 +1,18 @@
 return {
 	'neovim/nvim-lspconfig',
-	{'williamboman/mason.nvim', build = ':MasonUpdate',
+	{
+        'williamboman/mason.nvim',
+        build = ':MasonUpdate',
         config = function()
             require("user.lsp.mason")
-        end
+        end,
+        opts = {
+            ensure_installed = {
+                "clangd",
+                "clang-format",
+                "codelldb",
+            }
+        }
     },
 }
 
