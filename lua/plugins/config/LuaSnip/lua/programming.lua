@@ -83,7 +83,7 @@ s({trig = "rq", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
     })
 ),
 
-s({trig = "note", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
+s({trig = "note", wordTrig = false, regTrig = false, snippetType = 'snippet'},
     fmta([[
         ---------------------------------------------------------------------------
         --<>

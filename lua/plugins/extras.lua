@@ -23,6 +23,8 @@ return {
             })
         end,
     },
+    'MunifTanjim/nui.nvim',
 }
+
 
 

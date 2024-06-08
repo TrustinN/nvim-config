@@ -21,31 +21,24 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
     command = "silent !kill -SIGUSR1 $(pgrep -a kitty)"
 })
 
-if not vim.g.neovide then
-    function My_Mk_Line()
-        if vim.fn.line(".") == vim.fn.line("$") then
-            vim.cmd.normal("O")
-        end
-    end
-
-    local my_mk_line = vim.api.nvim_create_augroup('my_mk_line', { clear = true })
-    vim.api.nvim_create_autocmd({"CursorMoved"}, {
-        pattern = {"*.*"},
-        group = my_mk_line,
-        callback = My_Mk_Line,
-    })
-end
-
 local Python = vim.api.nvim_create_augroup('Python', { clear = true })
 vim.api.nvim_create_autocmd({"BufEnter"}, {
     group = Python,
     pattern = {"*.py"},
     callback = function()
-        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap.lua")
-        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/jupyter.lua")
+        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap-python.lua")
     end
 })
 
+local Cpp = vim.api.nvim_create_augroup('Cpp', { clear = true })
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+    group = Cpp,
+    pattern = {"*.cpp", "*.tpp"},
+    callback = function()
+        vim.opt.filetype = 'cpp'
+        vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap-cpp.lua")
+    end
+})
 
 ---------------------------------------------------------------------------
 --Neovide Config

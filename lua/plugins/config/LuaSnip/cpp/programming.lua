@@ -43,7 +43,6 @@ s({trig = "\"", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
     )
 ),
 
-
 s({trig = "\'", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
     fmta(
         "\'<>\'",
@@ -53,6 +52,17 @@ s({trig = "\'", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
     )
 ),
 
+s({trig = "note", wordTrig = false, regTrig = false, snippetType = 'snippet'},
+    fmta([[
+        // -------------------------------------------------------------------------------------------------//
+        // <>
+        // -------------------------------------------------------------------------------------------------//
+    ]],
+        {
+            d(1, get_visual)
+        }
+    )
+),
 
 
 

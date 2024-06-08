@@ -53,7 +53,7 @@ s({trig = "\'", wordTrig = false, regTrig = false, snippetType = 'autosnippet'},
     )
 ),
 
-s({trig = "note", snippetType = 'autosnippet'},
+s({trig = "note", snippetType = 'snippet'},
     fmta([[
         ###############################################################################
         # <> <> #
