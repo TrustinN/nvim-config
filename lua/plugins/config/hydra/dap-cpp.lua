@@ -17,14 +17,14 @@ local popup = Popup({
 local Hydra = require('hydra')
 local cmd = require('hydra.keymap-util').cmd
 local hint = [[
-              ▄▄▄▄           
-         █  ▄▀    ▀▄  █      
-          █ █▀▀▀▀▀▀█ █       
-           █        █        
-         ███        ███      
-           █        █        
-          █ █      █ █       
-         █   ██████   █      
+             ▄▄▄▄           
+        █  ▄▀    ▀▄  █       
+         █ █▀▀▀▀▀▀█ █        
+          █        █         
+        ███        ███       
+          █        █         
+         █ █      █ █        
+        █   ██████   █       
 
 _0_ - Build                  
 _1_ - DEBUG                  

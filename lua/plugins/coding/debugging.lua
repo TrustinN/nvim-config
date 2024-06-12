@@ -6,7 +6,7 @@ return {
     {
         "mfussenegger/nvim-dap",
         config = function()
-            require("plugins.config.nvim-dap")
+            require(vim.g.CODING_CONFIG_DIR .. "nvim-dap")
         end
     },
     "mfussenegger/nvim-dap-python",

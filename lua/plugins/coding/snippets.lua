@@ -8,7 +8,7 @@ return {
         version = "v2.0.0",
         build = "make install_jsregexp",
         config = function ()
-            require("plugins.config.lua-snip")
+            require(vim.g.CODING_CONFIG_DIR .. "lua-snip")
         end
     },
 }

@@ -2,26 +2,26 @@ local Hydra = require('hydra')
 local cmd = require('hydra.keymap-util').cmd
 
 local hint = [[
-              ▄▄▄▄           
-         █  ▄▀    ▀▄  █      
-          █ █▀▀▀▀▀▀█ █       
-           █        █        
-         ███        ███      
-           █        █        
-          █ █      █ █       
-         █   ██████   █      
+            ▄▄▄▄            
+       █  ▄▀    ▀▄  █       
+        █ █▀▀▀▀▀▀█ █        
+         █        █         
+       ███        ███       
+         █        █         
+        █ █      █ █        
+       █   ██████   █       
 
-_0_ - Set Venv               
-_1_ - DEBUG                  
+_0_ - Set Venv              
+_1_ - DEBUG                 
 
-_2_ - Breakpoint             
-_3_ - Conditional Breakpoint 
+_2_ - Breakpoint            
+_3_ - Conditional Breakpoint
 
-_4_ - Step over              
-_5_ - Step into              
+_4_ - Step over             
+_5_ - Step into             
 
-_6_ - Test method            
-_7_ - Terminate              
+_6_ - Test method           
+_7_ - Terminate             
 ]]
 
 Hydra({

@@ -1,7 +1,7 @@
 require("alpha.term")
 
 local dashboard = require("alpha.themes.dashboard")
-local headers = require("plugins.config.headers")
+local headers = require("plugins.config.ui.headers")
 
 ---------------------------------------------------------------------------
 --Headers

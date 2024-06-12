@@ -2,6 +2,7 @@
 --Leader Map
 ---------------------------------------------------------------------------
 
+require "config.configPaths"
 require "config.functions"
 require "config.options"
 require "user.reload"
@@ -21,7 +22,7 @@ require "config.lazy-config"
 require "config.mappings"
 require "config.colorscheme"
 require "config.background"
-require "plugins.config.alpha"
+require "plugins.config.ui.alpha"
 
 
 

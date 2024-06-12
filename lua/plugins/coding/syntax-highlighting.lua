@@ -5,7 +5,7 @@ return {
             require("nvim-treesitter.install").update({ with_sync = true })
         end,
         config = function()
-            require("plugins.config.treesitter")
+            require(vim.g.CODING_CONFIG_DIR .. "treesitter")
         end
     },
 }

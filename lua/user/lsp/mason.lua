@@ -29,7 +29,7 @@ end
 
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 500
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 require("mason").setup()
 
@@ -42,12 +42,14 @@ require("lspconfig").lua_ls.setup {
         }
     },
 }
+
 require("lspconfig").pylsp.setup {}
 require("lspconfig").julials.setup{
     julia_env_path = "%:p:h/.julia/environments/nvim-lspconfig",
 }
 require("lspconfig").tsserver.setup {}
 require("lspconfig").clangd.setup {}
+require'lspconfig'.cmake.setup{}
 
 
 

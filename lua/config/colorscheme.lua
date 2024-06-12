@@ -2,41 +2,25 @@ math.randomseed(os.time())
 -- local v = math.random(1, 4)
 local v = 2
 
-if v == 1 then
-    require("plugins.config.catppuccin")
-    vim.cmd("colorscheme catppuccin-latte")
+local schemes = {
+    "catppuccin-latte",
+    "catppuccin-mocha",
+    "falcon",
+}
 
-elseif v == 2 then
-    require("plugins.config.catppuccin")
-    vim.cmd("colorscheme catppuccin-mocha")
+local cmd = "colorscheme " .. schemes[v]
 
-elseif v == 3 then
-    vim.cmd([[
-        colorscheme falcon
-        hi StatusLineNC cterm=NONE ctermbg=NONE guibg=#151521
-        hi conceal cterm=NONE ctermbg=NONE guifg=#FFC552
-        hi NotifyBackground cterm=NONE ctermbg=NONE guibg=#000000
-    ]])
-
-elseif v == 4 then
-    vim.cmd([[
-        set background=light
-        colorscheme pencil
-        let g:pencil_higher_contrast_ui = 1
-        hi conceal cterm=NONE ctermbg=NONE guifg=#212121
-        hi DiagnosticHint cterm=NONE ctermbg=NONE guifg=#6855DE
-        hi DiagnosticInfo cterm=NONE ctermbg=NONE guifg=#5fb45c
-    ]])
-end
+-- load the colorscheme
+vim.cmd(cmd)
 
 -- load the statusline
-require("plugins.config.feline")
+require(vim.g.STATUSLINES_CONFIG_DIR .. "statusline")
 
 -- load the indent lines
-require("plugins.config.indent-blankline")
+require(vim.g.COLORSCHEME_CONFIG_DIR .. "indent-blankline")
 
 -- load the bufferline
-require("plugins.config.bufferline")
+require(vim.g.UI_CONFIG_DIR .. "bufferline")
 
 
 

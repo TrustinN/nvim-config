@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd({"ModeChanged"}, {
     pattern = {"*:n*"},
     command = "set conceallevel=2",
 })
+
 vim.api.nvim_create_autocmd({"ModeChanged"}, {
     group = Display,
     pattern = {"n*:*"},
@@ -37,6 +38,18 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
     callback = function()
         vim.opt.filetype = 'cpp'
         vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap-cpp.lua")
+    end
+})
+
+local Cmake = vim.api.nvim_create_augroup('Cmake', { clear = true })
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+    group = Cmake,
+    pattern = {"*.txt"},
+    callback = function()
+        if vim.fn.expand("%:p:t") == "CMakeLists.txt" then
+            vim.opt.filetype = 'cmake'
+            vim.cmd("luafile ~/.config/nvim/lua/plugins/config/hydra/dap-cpp.lua")
+        end
     end
 })
 

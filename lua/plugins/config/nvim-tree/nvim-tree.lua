@@ -2,7 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
-    on_attach = require("plugins.config.nvim-tree-mappings").on_attach,
+    on_attach = require(vim.g.NVIM_TREE_CONFIG_DIR .. "nvim-tree-mappings").on_attach,
     root_dirs = { "~/" },
     view = {
         adaptive_size = true,
