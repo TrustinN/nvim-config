@@ -20,10 +20,7 @@ end
 
 require "config.lazy-config"
 require "config.mappings"
-require "config.colorscheme"
-require "config.background"
-require "plugins.config.ui.alpha"
-
+require "config.aesthetics"
 
 
 

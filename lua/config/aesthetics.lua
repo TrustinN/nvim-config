@@ -1,17 +1,5 @@
-math.randomseed(os.time())
--- local v = math.random(1, 4)
-local v = 2
-
-local schemes = {
-    "catppuccin-latte",
-    "catppuccin-mocha",
-    "falcon",
-}
-
-local cmd = "colorscheme " .. schemes[v]
-
 -- load the colorscheme
-vim.cmd(cmd)
+require(vim.g.COLORSCHEME_CONFIG_DIR .. "colorscheme")
 
 -- load the statusline
 require(vim.g.STATUSLINES_CONFIG_DIR .. "statusline")
@@ -22,11 +10,11 @@ require(vim.g.COLORSCHEME_CONFIG_DIR .. "indent-blankline")
 -- load the bufferline
 require(vim.g.UI_CONFIG_DIR .. "bufferline")
 
+-- load the background & background picker
+require(vim.g.TELESCOPE_CONFIG_DIR .. "telescope-bg")
 
-
-
-
-
+-- load the welcome screen
+require(vim.g.UI_CONFIG_DIR .. "alpha")
 
 
 

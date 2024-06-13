@@ -4,12 +4,19 @@ return {
     ---------------------------------------------------------------------------
 
     {'nvim-telescope/telescope.nvim',
+        dependencies = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-lua/popup.nvim' },
+            { 'nvim-telescope/telescope-fzf-native.nvim',
+                build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' 
+            },
+            { 'nvim-telescope/telescope-frecency.nvim' },
+            { 'nvim-telescope/telescope-media-files.nvim' },
+        },
         config = function()
             require(vim.g.TELESCOPE_CONFIG_DIR .. "telescope")
         end
     },
-	'nvim-telescope/telescope-fzy-native.nvim',
-	'nvim-telescope/telescope-frecency.nvim',
 	'kkharji/sqlite.lua',
     {'nvim-tree/nvim-tree.lua',
         config = function()

@@ -119,28 +119,33 @@ require("telescope").setup {
     --   extension_config_key = value,
     -- }
     -- please take a look at the readme of the extension you want to configure
-  	fzy_native = {
-            override_generic_sorter = true,
-            override_file_sorter = true,
-  	},
+        fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+        },
 
-  	frecency = {
-      	    show_scores = false,
+        frecency = {
+            show_scores = false,
             show_unindexed = true,
-      	    ignore_patterns = {"*.git/*", "*/tmp/*"},
-      	    disable_devicons = false,
-      	    workspaces = {
-            	["conf"]    = "%:p:h/.config",
-      	    }
-    	}
+            ignore_patterns = {"*.git/*", "*/tmp/*"},
+            disable_devicons = false,
+            workspaces = {
+                ["conf"]    = "%:p:h/.config",
+            }
+        },
+
+        media_files = {
+            -- filetypes whitelist
+            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+            filetypes = {"png", "webp", "jpg", "jpeg"},
+            -- find command (defaults to `fd`)
+            find_cmd = "rg"
+        }
+
     },
 }
 
-require('telescope').load_extension('fzy_native')
--- require('telescope').load_extension('projects')
-
-
-
-
-
+require('telescope').load_extension('fzf')
 require("telescope").load_extension('frecency')
