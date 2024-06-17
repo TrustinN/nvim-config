@@ -17,22 +17,6 @@ vim.keymap.set("n", "=", "<Cmd>normal gj<CR>")
 --Window Navigation
 ---------------------------------------------------------------------------
 
--- function Left_Most_Window()
---     if vim.fn.win_screenpos(vim.fn.win_getid())[2] == 1 then
---         os.execute("/opt/homebrew/bin/hs -c 'focus_left()'")
---     else
---         vim.cmd("wincmd h")
---     end
--- end
---
--- function Right_Most_Window()
---     local first_pos = vim.fn.win_screenpos(vim.fn.win_getid())[2]
---     vim.cmd("wincmd l")
---     if vim.fn.win_screenpos(vim.fn.win_getid())[2] == first_pos then
---         os.execute("/opt/homebrew/bin/hs -c 'focus_right()'")
---     end
--- end
-
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { silent = true })
 
 vim.keymap.set("n", "<C-h>", "<Cmd>wincmd h<CR>")

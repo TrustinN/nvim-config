@@ -21,7 +21,9 @@ end
 require "config.lazy-config"
 require "config.mappings"
 require "config.aesthetics"
-
+require("catppuccin").options.transparent_background = true
+require("catppuccin").compile()
+vim.cmd.colorscheme(vim.g.colors_name)
 
 
 

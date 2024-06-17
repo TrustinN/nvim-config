@@ -7,9 +7,6 @@ require(vim.g.STATUSLINES_CONFIG_DIR .. "statusline")
 -- load the indent lines
 require(vim.g.COLORSCHEME_CONFIG_DIR .. "indent-blankline")
 
--- load the bufferline
-require(vim.g.UI_CONFIG_DIR .. "bufferline")
-
 -- load the background & background picker
 require(vim.g.TELESCOPE_CONFIG_DIR .. "telescope-bg")
 

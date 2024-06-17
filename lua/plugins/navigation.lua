@@ -24,7 +24,6 @@ return {
         end
     },
 	'nvim-tree/nvim-web-devicons',
-    {'akinsho/bufferline.nvim'},
 	'moll/vim-bbye',
     {
         "folke/trouble.nvim",
@@ -68,32 +67,6 @@ return {
     --Cursor Navigation
     ---------------------------------------------------------------------------
 
-    -- {
-    --     "m4xshen/hardtime.nvim",
-    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    --     opts = {
-    --         disabled_filetypes = {
-    --             "NvimTree",
-    --             "TelescopePrompt",
-    --             "alpha",
-    --             "checkhealth",
-    --             "dapui*",
-    --             "Dressing*",
-    --             "help",
-    --             "lazy",
-    --             "lspinfo",
-    --             "mason",
-    --             "neo%-tree*",
-    --             "netrw",
-    --         },
-    --     },
-    -- },
-    -- {
-    --     "tris203/precognition.nvim",
-    --     config = function()
-    --         require("precognition").toggle()
-    --     end
-    -- },
 	'tpope/vim-repeat',
     {'karb94/neoscroll.nvim',
         config = function()
